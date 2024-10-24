@@ -1,4 +1,4 @@
-<script>
+
   // Set up the scene, camera, and renderer
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
@@ -45,4 +45,4 @@
 
   // Start the animation
   animate();
-</script>
+
