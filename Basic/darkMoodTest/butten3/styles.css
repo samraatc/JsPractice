@@ -1,0 +1,171 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0d0d; /* Dark background */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Base Style for All Buttons */
+  .glow-on-hover {
+    font-size: 20px;
+    color: #fff;
+    background-color: #1a1a1a;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 5px #000, 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Button Hover and Active States */
+  .glow-on-hover:hover {
+    transform: translateY(-5px);
+  }
+  
+  .glow-on-hover:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px #000, 0 6px 15px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Unique Button Styles */
+  
+  /* Button 1: Neon Blue */
+  .btn-1 {
+    box-shadow: 0 5px #000, 0 10px 20px rgba(0, 0, 255, 0.5);
+  }
+  
+  .btn-1:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00f, #0ff);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  
+  .btn-1:hover:before {
+    opacity: 1;
+  }
+  
+  /* Button 2: Green Glow */
+  .btn-2 {
+    box-shadow: 0 5px #000, 0 10px 20px rgba(0, 255, 0, 0.5);
+  }
+  
+  .btn-2:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #0f0, #00ff00);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  
+  .btn-2:hover:before {
+    opacity: 1;
+  }
+  
+  /* Button 3: Purple Glow */
+  .btn-3 {
+    box-shadow: 0 5px #000, 0 10px 20px rgba(155, 89, 182, 0.5);
+  }
+  
+  .btn-3:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #9b59b6, #8e44ad);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  
+  .btn-3:hover:before {
+    opacity: 1;
+  }
+  
+  /* Button 4: Orange Glow */
+  .btn-4 {
+    box-shadow: 0 5px #000, 0 10px 20px rgba(230, 126, 34, 0.5);
+  }
+  
+  .btn-4:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #e67e22, #d35400);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  
+  .btn-4:hover:before {
+    opacity: 1;
+  }
+  
+  /* Button 5: Red Glow */
+  .btn-5 {
+    box-shadow: 0 5px #000, 0 10px 20px rgba(231, 76, 60, 0.5);
+  }
+  
+  .btn-5:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  
+  .btn-5:hover:before {
+    opacity: 1;
+  }
+  

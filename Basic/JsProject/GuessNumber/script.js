@@ -1,9 +1,7 @@
    const body = document.querySelector('body');
 body.style.backgroundColor = '#212121';
 body.style.color = '#ffffff';
-
-
-
+ 
 let randomNumber = parseInt(Math.random() * 100 + 1);
 // console.log(randomNumber);    // it test the random number
 
