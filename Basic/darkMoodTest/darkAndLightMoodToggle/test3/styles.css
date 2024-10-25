@@ -20,7 +20,7 @@
     --text-color: #1a1a1a;
     --button-color: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --glow-color: rgba(0, 0, 255, 0.7);
+    --glow-color: rgba(6, 60, 209, 0.986); /* Increased glow color intensity */
     --font-family: 'Roboto', sans-serif;
   }
   
@@ -30,7 +30,7 @@
     --text-color: #ffffff;
     --button-color: #1a1a1a;
     --shadow-color: rgba(0, 0, 0, 0.7);
-    --glow-color: rgba(0, 255, 255, 0.7);
+    --glow-color: rgba(0, 255, 255, 0.8); /* Increased glow color intensity */
     --font-family: 'Orbitron', sans-serif;
   }
   
@@ -68,29 +68,30 @@
     box-shadow: 0 2px 5px var(--shadow-color); /* Normal shadow effect */
   }
   
-  /* Glow effect for dark theme buttons */
+  /* Enhanced shadow effect for dark theme buttons */
   .dark-theme .nav-links button {
     position: relative; /* Relative position for pseudo-element */
+    overflow: hidden; /* Contain the pseudo-element */
   }
   
   .dark-theme .nav-links button:before {
     content: ""; /* Pseudo-element */
     position: absolute; /* Absolute positioning */
-    top: -5px; /* Adjust position */
-    left: -5px; /* Adjust position */
-    right: -5px; /* Adjust position */
-    bottom: -5px; /* Adjust position */
+    top: -8px; /* Adjust position for increased spread */
+    left: -8px; /* Adjust position for increased spread */
+    right: -8px; /* Adjust position for increased spread */
+    bottom: -8px; /* Adjust position for increased spread */
     border-radius: 5px; /* Rounded corners */
-    background: linear-gradient(45deg, #0ff, #00f, #f0f); /* Gradient */
+    background: transparent; /* No background */
+    box-shadow: 0 0 30px 10px var(--glow-color); /* Increased glowing shadow */
     z-index: -1; /* Behind the button */
-    filter: blur(15px); /* Blur effect */
     opacity: 0; /* Initially hidden */
-    transition: 0.3s; /* Smooth transition */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
   }
   
   .dark-theme .nav-links button:hover {
     transform: translateY(-2px); /* Slight lift */
-    box-shadow: 0 10px 20px var(--glow-color); /* Glowing effect in dark mode */
+    box-shadow: 0 0 15px var(--glow-color); /* Increased glowing shadow effect in dark mode */
   }
   
   .dark-theme .nav-links button:hover:before {
@@ -118,7 +119,7 @@
   
   .theme-toggle:hover {
     transform: translateY(-2px); /* Slight lift */
-    box-shadow: 0 5px 15px var(--glow-color); /* Glowing effect in dark mode */
+    box-shadow: 0 4px 10px var(--glow-color); /* Glowing effect in dark mode */
   }
   
   .container {
@@ -138,7 +139,9 @@
     transition: 0.3s; /* Smooth transition */
     box-shadow: 0 2px 5px var(--shadow-color); /* Normal shadow */
   }
+  
   .theme:hover {
     transform: translateY(-2px); /* Slight lift */
-    box-shadow: 0 5px 15px var(--glow-color); /* Glowing effect in dark mode */
+    box-shadow: 0 4px 10px var(--glow-color); /* Glowing effect in dark mode */
   }
+  
