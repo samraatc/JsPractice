@@ -1,0 +1,295 @@
+/* :root { */
+    /* Light Theme Colors and Font */
+    /* --background-color: #f0f0f0;
+    --button-color: #ffffff;
+    --glow-color: rgba(0, 0, 255, 0.7);
+    --text-color: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --font-family: 'Roboto', sans-serif; */
+  /* } */
+  
+  /* .dark-theme {
+    /* Dark Theme Colors and Font */
+    /* --background-color: #0d0d0d;
+    --button-color: #1a1a1a;
+    --glow-color: rgba(0, 255, 255, 0.7);
+    --text-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.7);
+    --font-family: 'Orbitron', sans-serif; */
+  /* } */ 
+  
+  /* body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    transition: background-color 0.5s ease, font-family 0.5s ease;
+  } */
+  
+  /* .glow-on-hover {
+    font-family: var(--font-family); /* Apply theme-specific font to button */
+    /* font-size: 20px;
+    color: var(--text-color);
+    background-color: var(--button-color);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 5px var(--shadow-color), 0 10px 20px var(--shadow-color); */
+  /* } */ 
+  
+  /* .glow-on-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--glow-color);
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  
+  .glow-on-hover:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px var(--shadow-color), 0 6px 15px var(--shadow-color);
+  } */
+
+  * {
+    margin: 0; /* Reset margin for all elements */
+    padding: 0; /* Reset padding for all elements */
+    box-sizing: border-box; /* Change box model to include padding and border in width/height */
+  }
+  
+  body {
+    height: 100vh; /* Set body's height to full viewport height */
+    display: flex; /* Use Flexbox layout for centering content */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    font-family: var(--font-family); /* Set font family using CSS variable */
+    background-color: var(--background-color); /* Set background color using CSS variable */
+    color: var(--paragraph-color); /* Set text color using CSS variable */
+    transition: background-color 0.5s ease, font-family 0.5s ease, color 0.5s ease; /* Smooth transitions for background color, font family, and text color */
+  }
+  
+  :root {
+    /* Light Theme Colors and Font */
+    --background-color: #f0f0f0; /* Light background color */
+    --button-color: #ffffff; /* Button background color */
+    --glow-color: rgba(0, 0, 255, 0.7); /* Glowing color for dark mode */
+    --text-color: #1a1a1a; /* Default text color */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* Shadow color */
+    --font-family: 'Roboto', sans-serif; /* Font family for light theme */
+    --toggle-bg: #1a1a1a; /* Toggle button background color */
+    --toggle-text: #ffffff; /* Toggle button text color */
+    --paragraph-color: #333; /* Default paragraph color */
+    --paragraph-font: 'Georgia', serif; /* Font family for paragraphs */
+  }
+  
+  .dark-theme {
+    /* Dark Theme Colors and Font */
+    --background-color: #0d0d0d; /* Dark background color */
+    --button-color: #1a1a1a; /* Dark button background color */
+    --glow-color: rgba(0, 255, 255, 0.7); /* Glowing color for dark theme */
+    --text-color: #ffffff; /* Text color for dark theme */
+    --shadow-color: rgba(0, 0, 0, 0.7); /* Shadow color for dark theme */
+    --font-family: 'Orbitron', sans-serif; /* Font family for dark theme */
+    --toggle-bg: #f0f0f0; /* Toggle button background color in dark mode */
+    --toggle-text: #1a1a1a; /* Toggle button text color in dark mode */
+    --paragraph-color: #b3b3b3; /* Paragraph color for dark theme */
+    --paragraph-font: 'Courier New', monospace; /* Font family for paragraphs in dark mode */
+  }
+  
+  .container {
+    text-align: center; /* Center text within the container */
+    display: flex; /* Use Flexbox layout */
+    flex-direction: column; /* Arrange children vertically */
+    gap: 20px; /* Add space between the buttons and content */
+  }
+  
+  .content p {
+    margin: 10px 0; /* Add vertical margin around paragraphs */
+    font-family: var(--paragraph-font); /* Set font family for paragraphs */
+    color: var(--paragraph-color); /* Set text color for paragraphs */
+    line-height: 1.5; /* Adjust space between lines for readability */
+  }
+  
+  /* Paragraph colors in dark mode */
+  .dark-theme .content p:nth-child(1) {
+    color: #ffb3b3; /* Light red */
+  }
+  
+  .dark-theme .content p:nth-child(2) {
+    color: #b3ffb3; /* Light green */
+  }
+  
+  .dark-theme .content p:nth-child(3) {
+    color: #b3b3ff; /* Light blue */
+  }
+  
+  .dark-theme .content p:nth-child(4) {
+    color: #ffffb3; /* Light yellow */
+  }
+  
+  .dark-theme .content p:nth-child(5) {
+    color: #ffb3ff; /* Light pink */
+  }
+  
+  .theme-toggle {
+    background-color: var(--toggle-bg); /* Background color for toggle button */
+    color: var(--toggle-text); /* Text color for toggle button */
+    border: 2px solid var(--toggle-text); /* Border color for toggle button */
+    padding: 10px 20px; /* Padding for toggle button */
+    border-radius: 8px; /* Rounded corners for toggle button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-transform: uppercase; /* Make text uppercase */
+    font-weight: bold; /* Make font bold */
+    position: relative; /* Position for pseudo-elements */
+    transition: 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px var(--shadow-color), 0 10px 20px var(--shadow-color); /* Shadow effect for toggle button */
+  }
+  
+  .dark-theme .theme-toggle:before {
+    content: ""; /* Pseudo-element for glow effect */
+    position: absolute; /* Position relative to the button */
+    top: -5px; /* Adjust position */
+    left: -5px; /* Adjust position */
+    right: -5px; /* Adjust position */
+    bottom: -5px; /* Adjust position */
+    border-radius: 8px; /* Rounded corners for glow effect */
+    background: linear-gradient(45deg, #ff0, #f0f, #0ff); /* Gradient background for glow */
+    z-index: -1; /* Position behind the button */
+    filter: blur(15px); /* Blur effect for glow */
+    opacity: 0; /* Initially hidden */
+    transition: 0.3s ease; /* Smooth transition for opacity */
+  }
+  
+  .theme-toggle:hover {
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+    box-shadow: 0 10px 20px var(--shadow-color); /* Enhanced shadow on hover */
+  }
+  
+  .dark-theme .theme-toggle:hover:before {
+    opacity: 1; /* Show glow effect on hover */
+  }
+  
+  .theme-toggle:active {
+    transform: translateY(2px); /* Slightly lower the button on click */
+    box-shadow: 0 3px var(--shadow-color), 0 6px 15px var(--shadow-color); /* Reduce shadow on click */
+  }
+  
+  .glow-on-hover {
+    font-size: 20px; /* Font size for glowing button */
+    color: var(--text-color); /* Text color for glowing button */
+    background-color: var(--button-color); /* Background color for glowing button */
+    border: none; /* No border */
+    padding: 15px 30px; /* Padding for glowing button */
+    border-radius: 10px; /* Rounded corners for glowing button */
+    position: relative; /* Position for pseudo-elements */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    outline: none; /* Remove outline */
+    text-transform: uppercase; /* Make text uppercase */
+    font-weight: bold; /* Make font bold */
+    transition: 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px var(--shadow-color), 0 10px 20px var(--shadow-color); /* Shadow effect for glowing button */
+  }
+  
+  .glow-on-hover:before {
+    content: ""; /* Pseudo-element for glow effect */
+    position: absolute; /* Position relative to the button */
+    top: -5px; /* Adjust position */
+    left: -5px; /* Adjust position */
+    right: -5px; /* Adjust position */
+    bottom: -5px; /* Adjust position */
+    border-radius: 10px; /* Rounded corners for glow effect */
+    background: linear-gradient(45deg, #0ff, #00f, #f0f); /* Gradient background for glow */
+    z-index: -1; /* Position behind the button */
+    filter: blur(20px); /* Blur effect for glow */
+    opacity: 0; /* Initially hidden */
+    transition: 0.3s ease; /* Smooth transition for opacity */
+  }
+  
+  .glow-on-hover:hover {
+    transform: translateY(-5px); /* Slightly lift the button on hover */
+    box-shadow: 0 10px 20px var(--glow-color); /* Enhanced shadow on hover */
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1; /* Show glow effect on hover */
+  }
+  
+  .glow-on-hover:active {
+    transform: translateY(2px); /* Slightly lower the button on click */
+    box-shadow: 0 3px var(--shadow-color), 0 6px 15px var(--shadow-color); /* Reduce shadow on click */
+  }
+  
+  
+  
+
+
+  
+
+  :root {
+    /* Light Theme Colors and Font */
+    --background-color: #f0f0f0;
+    --button-color: #ffffff;
+    --glow-color: rgba(0, 0, 255, 0.7);
+    --text-color: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --font-family: 'Roboto', sans-serif;
+    --toggle-bg: #1a1a1a;
+    --toggle-text: #ffffff;
+    --paragraph-color: #333;
+    --paragraph-font: 'Georgia', serif;
+  
+    /* Adjustable Button Size */
+    --button-padding: 8px 16px; /* Reduced padding for smaller size */
+    --font-size: 16px; /* Adjusted font size */
+  }
+  
+  .dark-theme {
+    /* Dark Theme Colors and Font */
+    --background-color: #0d0d0d;
+    --button-color: #1a1a1a;
+    --glow-color: rgba(0, 255, 255, 0.7);
+    --text-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.7);
+    --font-family: 'Orbitron', sans-serif;
+    --toggle-bg: #f0f0f0;
+    --toggle-text: #1a1a1a;
+    --paragraph-color: #b3b3b3;
+    --paragraph-font: 'Courier New', monospace;
+  }
+  
+  .glow-on-hover {
+    font-size: var(--font-size);
+    color: var(--text-color);
+    background-color: var(--button-color);
+    border: none;
+    padding: var(--button-padding);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 5px var(--shadow-color), 0 10px 20px var(--shadow-color);
+  }
+  
+  .theme-toggle {
+    font-size: var(--font-size);
+    background-color: var(--toggle-bg);
+    color: var(--toggle-text);
+    border: 2px solid var(--toggle-text);
+    padding: var(--button-padding);
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s ease;
+    box-shadow: 0 5px var(--shadow-color), 0 10px 20px var(--shadow-color);
+  }
+  

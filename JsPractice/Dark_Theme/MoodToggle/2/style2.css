@@ -1,0 +1,128 @@
+* {
+    margin: 0; /* Reset margin for all elements */
+    padding: 0; /* Reset padding for all elements */
+    box-sizing: border-box; /* Box model settings */
+  }
+  
+  body {
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Vertical arrangement */
+    font-family: var(--font-family); /* Font family */
+    background-color: var(--background-color); /* Background color */
+    color: var(--text-color); /* Text color */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transitions */
+  }
+  
+  :root {
+    /* Light Theme Colors */
+    --background-color: #f0f0f0;
+    --text-color: #1a1a1a;
+    --button-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --glow-color: rgba(0, 0, 255, 0.7);
+    --font-family: 'Roboto', sans-serif;
+  }
+  
+  .dark-theme {
+    /* Dark Theme Colors */
+    --background-color: #0d0d0d;
+    --text-color: #ffffff;
+    --button-color: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.7);
+    --glow-color: rgba(0, 255, 255, 0.7);
+    --font-family: 'Orbitron', sans-serif;
+  }
+  
+  .navbar {
+    background-color: var(--button-color); /* Navbar background color */
+    padding: 15px 30px; /* Padding */
+    box-shadow: 0 4px 10px var(--shadow-color); /* Shadow effect */
+    position: fixed; /* Fixed position */
+    top: 0; /* Top alignment */
+    left: 0; /* Left alignment */
+    right: 0; /* Right alignment */
+    z-index: 1000; /* On top */
+  }
+  
+  .navbar .container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+  }
+  
+  .nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Horizontal layout */
+    gap: 15px; /* Space between links */
+  }
+  
+  .nav-links button {
+    background-color: var(--button-color); /* Button background */
+    color: var(--text-color); /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: 0.3s; /* Smooth transition */
+    box-shadow: 0 2px 5px var(--shadow-color); /* Normal shadow effect */
+  }
+  
+  /* Glow effect for dark theme buttons */
+  .dark-theme .nav-links button {
+    position: relative; /* Relative position for pseudo-element */
+  }
+  
+  .dark-theme .nav-links button:before {
+    content: ""; /* Pseudo-element */
+    position: absolute; /* Absolute positioning */
+    top: -5px; /* Adjust position */
+    left: -5px; /* Adjust position */
+    right: -5px; /* Adjust position */
+    bottom: -5px; /* Adjust position */
+    border-radius: 5px; /* Rounded corners */
+    background: linear-gradient(45deg, #0ff, #00f, #f0f); /* Gradient */
+    z-index: -1; /* Behind the button */
+    filter: blur(15px); /* Blur effect */
+    opacity: 0; /* Initially hidden */
+    transition: 0.3s; /* Smooth transition */
+  }
+  
+  .dark-theme .nav-links button:hover {
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 10px 20px var(--glow-color); /* Glowing effect in dark mode */
+  }
+  
+  .dark-theme .nav-links button:hover:before {
+    opacity: 1; /* Show glow effect */
+  }
+  
+  .dark-theme .nav-links button:active {
+    transform: translateY(2px); /* Slight lower */
+    box-shadow: 0 3px var(--shadow-color); /* Reduced shadow */
+  }
+  
+  /* Toggle Button Styles */
+  .theme-toggle {
+    background-color: var(--button-color); /* Background color */
+    color: var(--text-color); /* Text color */
+    border: 2px solid var(--shadow-color); /* Border */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: bold; /* Bold text */
+    transition: 0.3s; /* Smooth transition */
+    box-shadow: 0 2px 5px var(--shadow-color); /* Normal shadow */
+  }
+  
+  .theme-toggle:hover {
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 5px 15px var(--glow-color); /* Glowing effect in dark mode */
+  }
+  
+  .container {
+    margin-top: 70px; /* Space below fixed navbar */
+    text-align: center; /* Center text */
+  }
+  

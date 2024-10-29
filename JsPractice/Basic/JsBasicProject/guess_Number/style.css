@@ -1,0 +1,58 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+label{
+    margin: 10px;
+}
+input{
+    margin: 7px;
+    border-radius: 10px;
+}
+#submit{
+    height: 30px;
+    width: 100px;
+    background-color: bisque;
+}
+#guessFiels{
+    height: 30px;
+    width: 180px;
+    background-color: rgb(207, 196, 182);
+}
+.resulDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+}
