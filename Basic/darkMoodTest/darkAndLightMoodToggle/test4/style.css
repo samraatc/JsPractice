@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+  perspective: 800px; /* Creates a 3D perspective effect */
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d; /* Preserve 3D effect */
+  transform: rotateX(0) rotateY(0); /* Initial rotation */
+  transition: transform 0.6s; /* Smooth transition for rotation */
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.front  { transform: translateZ(100px); background-color: #ff6347; }
+.back   { transform: rotateY(180deg) translateZ(100px); background-color: #4682b4; }
+.right  { transform: rotateY(90deg) translateZ(100px); background-color: #3cb371; }
+.left   { transform: rotateY(-90deg) translateZ(100px); background-color: #ffd700; }
+.top    { transform: rotateX(90deg) translateZ(100px); background-color: #8a2be2; }
+.bottom { transform: rotateX(-90deg) translateZ(100px); background-color: #ffa500; }
+
+#rotate-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #008cba;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#rotate-button:hover {
+  background-color: #005f7f; /* Darker shade on hover */
+}
