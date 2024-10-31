@@ -4,7 +4,7 @@ const changeQuestion = () => {
     document.querySelector('#strong').style.color = "#0040ff";
     console.log("test", Date.now());
     
-// }
+}
 
 // // const Interval = setInterval(changeQuestion, 1000);   // it will change the question color after every 1 sec
 // // // clearInterval(Interval);   // it will stop the question color change
